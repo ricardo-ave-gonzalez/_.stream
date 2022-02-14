@@ -12,10 +12,10 @@ public class Estadisticas {
     public static void autosCount() throws Exception {
         List<Auto> autos = MockData.obtenerAutos();
         long count = autos.stream()
-                //.filter(z -> z.marca == "Ford")
+                .filter(z -> z.marca.equals("Ford"))
                 .filter(z -> z.año > 2010)
                 .count();
-        System.out.println("Se registraron " + count + " vehículos marca Ford");
+        System.out.println("Se registraron " + count + " vehículos marca Ford modelo 2010 o superior");
     }
 
     public static void autosPrecioMinimo() throws Exception {
