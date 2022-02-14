@@ -20,22 +20,21 @@ public class Filtracion {
 
     }
 
-    public static void main(String[] args) throws Exception {
-        
+    public static void autosFiltrados() throws Exception {
         List<Auto> autos = MockData.obtenerAutos();
-
         Predicate<Auto> autoPredicate = z -> z.precio < 20000.00;
-        Predicate<Auto> yellow = z -> z.color == "Yellow";
+        Predicate<Auto> yellow = z -> z.color.equals("Yellow");
 
         List<Auto> autosFiltrados = autos.stream()
-                //.filter(autoPredicate)
+                .filter(autoPredicate)
                 .filter(yellow)
                 .collect(Collectors.toList());
 
         autosFiltrados.forEach(System.out::println);
+    }
 
-        dropWhile();
-
-
+    public static void main(String[] args) throws Exception {
+        autosFiltrados();
+        //dropWhile();
     }
 }
