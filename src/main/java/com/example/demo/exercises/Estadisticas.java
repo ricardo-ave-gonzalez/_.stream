@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Estadisticas {
 
-    public static void autosCount() throws Exception {
+    public static void autosCountConFiltro() throws Exception {
         List<Auto> autos = MockData.obtenerAutos();
         long count = autos.stream()
                 .filter(z -> z.marca.equals("Ford"))
@@ -66,7 +66,7 @@ public class Estadisticas {
     }
 
     public static void main(String[] args) throws Exception {
-        autosCount();
+        autosCountConFiltro();
         autosPrecioMinimo();
         autosPrecioMaximo();
         autosPrecioPromedio();

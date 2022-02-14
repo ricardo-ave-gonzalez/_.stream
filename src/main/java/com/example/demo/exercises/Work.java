@@ -23,8 +23,24 @@ public class Work {
                 MockData.obtenerAutos()
                         .stream()
                         .filter(z -> {
-                            if(z.precio < 6000){
+                            if (z.precio < 6000) {
                                 System.out.println("los autos baratos son " + z.marca + " $" + z.precio);
+                            }
+                            return false;
+                        })
+                        .collect(Collectors.toList())
+        );
+
+
+        System.out.println("-------------------------------------------------------------------------");
+        System.out.println("-------------------  filtros...              ----------------------------");
+
+        System.out.println(
+                MockData.obtenerPersonas()
+                        .stream()
+                        .filter(z -> {
+                            if (z.edad > 18 && z.edad < 35 && z.genero.equals("Female")) {
+                                System.out.println(z.nombre + " de " + z.edad + " años, genero " + z.genero);
                             }
                             return false;
                         })
