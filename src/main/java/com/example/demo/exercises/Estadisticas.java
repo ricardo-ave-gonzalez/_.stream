@@ -14,7 +14,7 @@ public class Estadisticas {
                 .filter(z -> z.año > 2010)
                 .count();
         System.out.println("Se registraron " + count + " vehículos");
-    }   
+    }
 
     public static void main(String[] args) throws Exception {
         autosCount();

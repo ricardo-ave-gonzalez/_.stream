@@ -6,7 +6,7 @@ import lombok.*;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class PerdonaDTO {
+public class PersonaDTO {
     public Integer id;
     public String nombre;
     public Integer edad;
