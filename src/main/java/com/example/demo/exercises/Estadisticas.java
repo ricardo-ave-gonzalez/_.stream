@@ -16,7 +16,17 @@ public class Estadisticas {
         System.out.println("Se registraron " + count + " vehículos");
     }
 
+    public static void autosMinimo() throws Exception {
+        List<Auto> autos = MockData.obtenerAutos();
+        double min = autos.stream()
+                .mapToDouble(z -> z.precio)
+                .min()
+                .orElse(0);
+        System.out.println(min);
+    }
+
     public static void main(String[] args) throws Exception {
         autosCount();
+        autosMinimo();
     }
 }
