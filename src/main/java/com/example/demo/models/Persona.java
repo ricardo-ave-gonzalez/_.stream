@@ -2,6 +2,8 @@ package com.example.demo.models;
 
 import lombok.*;
 
+@Getter
+@Setter
 @Builder
 @ToString
 @NoArgsConstructor
