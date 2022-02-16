@@ -1,8 +1,11 @@
 package com.example.demo.exercises;
 
 import com.example.demo.mockdata.MockData;
+import com.example.demo.models.DesarrolloDTO;
+import com.example.demo.models.PersonaDTO;
 
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Work {
@@ -16,10 +19,19 @@ public class Work {
         emails.forEach(System.out::println);
     }
 
-    public static void main(String[] args) throws Exception {
-        solicitarEmail();
+    public static PersonaDTO desdePersonaDTO(PersonaDTO persona){
+        if(persona == null);
+        return PersonaDTO.builder()
+                .id(persona.id)
+                .edad(persona.edad)
+                .nombre(persona.nombre)
+                .build();
+    }
 
-        System.out.println(
+    public static void main(String[] args) throws Exception {
+        //solicitarEmail();
+
+        /*System.out.println(
                 MockData.obtenerAutos()
                         .stream()
                         .filter(z -> {
@@ -45,6 +57,13 @@ public class Work {
                             return false;
                         })
                         .collect(Collectors.toList())
+        )*/
+        
+        System.out.println(
+                MockData.obtenerListado()
+                        .stream()
+                        .map( z -> desdePersonaDTO(z.persona))
+                        .count()
         );
     }
 }

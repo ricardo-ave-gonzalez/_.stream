@@ -7,7 +7,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PersonaDTO {
-    public Integer id;
+    public String id;
     public String nombre;
     public Integer edad;
 }
