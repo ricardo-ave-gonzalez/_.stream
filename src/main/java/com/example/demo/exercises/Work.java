@@ -2,6 +2,7 @@ package com.example.demo.exercises;
 
 import com.example.demo.mockdata.MockData;
 import com.example.demo.models.DesarrolloDTO;
+import com.example.demo.models.Persona;
 import com.example.demo.models.PersonaDTO;
 
 import java.util.List;
@@ -57,13 +58,24 @@ public class Work {
                             return false;
                         })
                         .collect(Collectors.toList())
-        )*/
-        
+        )
+
         System.out.println(
                 MockData.obtenerListado()
                         .stream()
                         .map( z -> desdePersonaDTO(z.persona))
                         .count()
         );
+
+        MockData.obtenerPersonas()
+                .stream()
+                .map(z -> z.apellido)
+                .map(String::toUpperCase)
+                .sorted()
+                .forEach(System.out::println);*/
+
+
+        boolean tieneTodos = MockData.obtenerAutos().stream().allMatch(z -> z.precio > 500);
+        System.out.println(tieneTodos);
     }
 }
