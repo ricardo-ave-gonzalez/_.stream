@@ -1,0 +1,1 @@
+java -jar target\streams-0.0.1-SNAPSHOT.jar
