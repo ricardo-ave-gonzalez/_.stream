@@ -6,6 +6,7 @@ import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import lombok.*;
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Objects;
@@ -32,11 +33,12 @@ public class Trace {
     @Column(name = "creadoPor")
     public String creadoPor;
 
-    @Column
-    public String rolDeUsuario;
+    @Column(name="rolCreadoPor")
+    public String rolCreadoPor;
 
-    @OneToMany(mappedBy="acciones")
-    public List<Accion> acciones;
+    @Builder.Default
+    @OneToMany(mappedBy="trace")
+    public List<Accion> acciones = new ArrayList<>();
 
     @Override
     public boolean equals(Object o) {
