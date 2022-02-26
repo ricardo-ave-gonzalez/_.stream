@@ -35,6 +35,10 @@ public class Accion {
     @Column(name = "modificadoPor")
     public String modificadoPor;
 
+    @ManyToOne
+    @JoinColumn(name="trace_id")
+    public Trace trace;
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
