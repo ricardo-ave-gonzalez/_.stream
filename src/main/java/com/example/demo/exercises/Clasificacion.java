@@ -1,15 +1,8 @@
 package com.example.demo.exercises;
 
-import com.example.demo.mockdata.MockData;
-import com.example.demo.models.Persona;
-
-import java.util.Comparator;
-import java.util.List;
-import java.util.stream.Collectors;
-
 public class Clasificacion {
 
-    public static void clasificandoAlfabeticamente() throws Exception{
+    /* public static void clasificandoAlfabeticamente() throws Exception{
         List<Persona> personas = MockData.obtenerPersonas();
         List<String> clasificacion = personas.stream()
                 .map(z -> z.nombre)
@@ -46,5 +39,5 @@ public class Clasificacion {
         //clasificandoAlfabeticamente();
         //clasificandoAlfabeticamenteEnReversa();
         test();
-    }
+    } */
 }
