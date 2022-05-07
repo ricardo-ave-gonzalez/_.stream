@@ -1,15 +1,8 @@
 package com.example.demo.exercises;
 
-import com.example.demo.mockdata.MockData;
-import com.example.demo.models.Auto;;
-import java.util.List;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
 public class Filtracion {
 
-    public static void dropWhile() throws Exception {
+    /* public static void dropWhile() throws Exception {
         System.out.println("usando filter");
         Stream.of(2, 4, 6, 8, 9, 10, 12).filter(n -> n % 2 == 0)
                 .forEach(n -> System.out.print(n + " "));
@@ -31,10 +24,7 @@ public class Filtracion {
                 .collect(Collectors.toList());
 
         autosFiltrados.forEach(System.out::println);
-    }
+    } */
 
-    public static void main(String[] args) throws Exception {
-        autosFiltrados();
-        //dropWhile();
-    }
+
 }

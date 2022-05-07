@@ -1,15 +1,12 @@
 package com.example.demo.exercises;
 
-import com.example.demo.mockdata.MockData;
-import com.example.demo.models.Auto;
-
-import java.math.BigDecimal;
-import java.util.DoubleSummaryStatistics;
-import java.util.List;
+//import java.math.BigDecimal;
+//import java.util.DoubleSummaryStatistics;
+//import java.util.List;
 
 public class Estadisticas {
 
-    public static void autosCountConFiltro() throws Exception {
+    /* public static void autosCountConFiltro() throws Exception {
         List<Auto> autos = MockData.obtenerAutos();
         long count = autos.stream()
                 .filter(z -> z.marca.equals("Ford"))
@@ -63,14 +60,14 @@ public class Estadisticas {
         System.out.println(statistics.getMax());
         System.out.println(statistics.getAverage());
         System.out.println(BigDecimal.valueOf(statistics.getSum()));
-    }
+    } */
 
     public static void main(String[] args) throws Exception {
-        autosCountConFiltro();
-        autosPrecioMinimo();
-        autosPrecioMaximo();
-        autosPrecioPromedio();
-        autosPrecioTotal();
-        autosPrecioEstadisticas();
+        //autosCountConFiltro();
+        //autosPrecioMinimo();
+        //autosPrecioMaximo();
+        //autosPrecioPromedio();
+        //autosPrecioTotal();
+        //autosPrecioEstadisticas();
     }
 }
